@@ -1,6 +1,8 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 export default function () {
+	const count = useSelector((state) => state.counter);
 	return (
 		<nav className="navbar navbar-expand-lg navbar-light bg-light">
 			<div className="container-fluid">
@@ -27,7 +29,7 @@ export default function () {
 						</li>
 						<li className="nav-item">
 							<NavLink className="nav-link" to="/favorites">
-								Favorites
+								Favorites<small>({count})</small>
 							</NavLink>
 						</li>
 					</ul>
