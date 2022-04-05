@@ -137,3 +137,14 @@
 	opacity: 1;
 	color: #ffe234;
 }
+
+.search-list {
+	background-color: #494949;
+	position: absolute;
+	z-index: 1000;
+	left: 12vw;
+
+	bottom: -25vh;
+	width: fit-content;
+	height: 25vh;
+}

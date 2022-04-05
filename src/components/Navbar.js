@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 export default function () {
 	const count = useSelector((state) => state.counter);
+	const search = () => {};
 	return (
 		<nav className="navbar navbar-expand-lg navbar-light bg-light">
 			<div className="container-fluid">
@@ -33,8 +34,15 @@ export default function () {
 							</NavLink>
 						</li>
 					</ul>
+					<form>
+						<input type="text"></input>
+						<button onSubmit={search}>
+							<i className="fa fa-search"></i>
+						</button>
+					</form>
 				</div>
 			</div>
+			<div className="search-list"></div>
 		</nav>
 	);
 }
